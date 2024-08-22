@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erica e Riccardo</title>
+</head>
+
+<body>
+
+  <header>
+    <h1 id="Titolone" class=header-pattern-1><span class="special-font">Benvenuti </span> <br>Al Matrimonio di <br>
+      Erica
+      e Riccardo</h1>
+  </header>
+
+  <header id="countdown-header">
+    <div id="countdown-wrapper">
+      <div class="countdown-img left-img">
+        <img src="IMG_2764.jpg" alt="Left Image">
+        <div class="image-label">Molto tempo fa</div>
+      </div>
+      <div id="countdown">
+        <div id="days">00</div> Giorni
+        <div id="hours">00</div> Ore
+        <div id="minutes">00</div> Minuti
+        <div id="seconds">00</div> Secondi
+      </div>
+      <div class="countdown-img right-img">
+        <img src="IMG_2387.jpg" alt="Right Image">
+        <div class="image-label">Poco tempo fa</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about bordered section-pattern-1">
+    <div class="left">
+      <h2>Indovinate un po'</h2>
+    </div>
+    <div class="right">
+      <p title="Non vediamo l'ora di festeggiare con voi!">
+        Oltre a formare una bella allitterazione <br>
+        <strong> ci spoooosiamo !! </strong>
+      </p>
+      <p>
+        Siamo molto molto emozionati <br>
+        nel condividere con voi <br>
+        questa bella notizia
+      </p>
+    </div>
+  </section>
+
+  <section class="event-details bordered section-pattern-2">
+    <div class="left">
+      <p>Vi aspettiamo il <br>
+        <strong> 26 ottobre 2024, alle 11:00 </strong> <br>
+        alla Chiesa della nativita' di Maria <br>
+        di <strong> Pergine Valsugana </strong>
+      </p>
+      <p>
+        Seguira' ricevimento a <strong> Castel Ivano </strong> <br>
+        per festeggiare insieme <br>
+        a suon di musica swing, <br>
+        tanto vino e prelibatezze
+      </p>
+    </div>
+    <div class="right">
+      <h2>Siete invitati!</h2>
+    </div>
+  </section>
+
+  <section class="practical-things bordered section-pattern-3">
+    <div class="left">
+      <h2>Cose pratiche</h2>
+    </div>
+    <div class="right">
+      <p>
+        Apprezzeremmo molto una conferma <br>
+        di partecipazione
+      </p>
+      <p>
+        Se venite accompagnati <br>
+        e non abbiamo ancora avuto il piacere <br>
+        vi preghiamo di indicare eventuali <br>
+        intolleranze o preferenze <br>
+        per cibo o alcool
+      </p>
+    </div>
+  </section>
+
+  <section class="gifts section-pattern-2">
+    <div class="left">
+      <p>La vostra presenza <br>
+        è senza dubbio il regalo piu' bello <br>
+        che possiate farci
+      </p>
+      <p> Se voleste dedicarci un pensiero, <br>
+        apprezzeremmo un contributo <br>
+        per la nostra luna di miele <br>
+        tra Giappone e Maldive
+      </p>
+      <p>IBAN: <strong>DE89 3704 0044 0532 0130 00</strong></p>
+    </div>
+    <div class="right">
+      <h2>Lista nozze</h2>
+    </div>
+  </section>
+
+
+  <section class="gallery section-pattern-4">
+
+    <div class="countdown-img left-img">
+      <img src="IMG_8612.jpg" alt="Left Image">
+    </div>
+    <div class="countdown-img right-img">
+      <img src="castello_ala.jpg" alt="Right Image">
+    </div>
+
+  </section>
+
+
+
+  <header>
+    <h1 id="Chiusura" class="header-pattern-2"> ... and I seem to find <br> the happyness I seek <br> when we're out
+      <br> together <br>
+      dancing cheek to cheek
+    </h1>
+  </header>
+
+  <script>
+    // Set the date we're counting down to
+    const countdownDate = new Date("October 26, 2024 11:00:00").getTime();
+
+    // Update the countdown every 1 second
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update the countdown elements
+      document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+      document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "JUST MARRIED!";
+      }
+    };
+
+    // Initial call
+    updateCountdown();
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+  </script>
+
+  <script>
+    let paramString = window.location.search.split('?')[1]
+    let queryString = new URLSearchParams(paramString)
+    let nva = parseInt(queryString.get('nva'))
+    let now = new Date().getTime()
+    if (Number.isNaN(nva) || now > nva) {
+      console.log('not-valid-after invalid, going to redirect to /')
+      window.location = '/'
+    }
+  </script>
+</body>
+
+</html>
