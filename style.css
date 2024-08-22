@@ -1,24 +1,12 @@
 @font-face {
-    font-family: 'SebBobby';
-    src: url('../Sebastian Bobby Slanted.otf') format('opentype');
-    font-weight: normal;
-}
-
-@font-face {
     font-family: 'Salty';
-    src: url('../Salty Feathers.otf') format('opentype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'PetiteCaps';
-    src: url('../MrsEavesPetiteCaps PetiteCaps.ttf') format('truetype');
+    src: url('style/Salty Feathers.otf') format('opentype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Black';
-    src: url('../Black Mango Light.ttf') format('truetype');
+    src: url('style/Black Mango Light.ttf') format('truetype');
     font-weight: normal;
 }
 
