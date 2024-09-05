@@ -338,7 +338,7 @@ section .right {
 .gifts p {
     font-family: 'Black';
     color: #bb7a68ff;
-    font-size: calc(2.5vw);
+    font-size: calc(2vw);
     font-weight: normal;
     position: relative;
 }
