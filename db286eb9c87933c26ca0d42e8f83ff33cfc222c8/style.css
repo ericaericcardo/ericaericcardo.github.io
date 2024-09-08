@@ -311,6 +311,7 @@ section .right {
 .practical-things,
 .about,
 .gifts,
+.see-you,
 .gallery,
 .rsvp {
     background-color: #F6EAD7;
@@ -335,6 +336,7 @@ section .right {
 .event-details p,
 .practical-things p,
 .rsvp p,
+.see-you p,
 .gifts p {
     font-family: 'Black';
     color: #bb7a68ff;
@@ -347,6 +349,7 @@ section .right {
 .event-details h2,
 .practical-things h2,
 .rsvp h2,
+.see-you h2,
 .gifts h2 {
     font-family: 'Salty';
     color: #5c4a09;
