@@ -40,8 +40,8 @@ header {
     color: #5c4a09;
     text-align: center;
     width: 100%;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: calc(10vw);
+    margin-top: calc(10vw);
     /* Add space below the header */
 }
 
