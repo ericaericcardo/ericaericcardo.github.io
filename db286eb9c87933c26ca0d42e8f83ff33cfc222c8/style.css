@@ -48,7 +48,7 @@ header {
 header h1 {
     font-family: 'Salty';
     margin: 0;
-    font-size: calc(14vw);
+    font-size: calc(16vw);
     font-weight: normal;
     text-align: right;
     padding-right: 5%;
@@ -357,7 +357,7 @@ section .right {
 .gifts h2 {
     font-family: 'Salty';
     color: #5c4a09;
-    font-size: calc(13vw);
+    font-size: calc(14vw);
     font-weight: normal;
     text-align: center;
 
