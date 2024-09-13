@@ -359,9 +359,6 @@ section .right {
     color: #5c4a09;
     font-size: calc(13vw);
     font-weight: normal;
-    position: relative;
-    top: 50%;
-    left: 50%;
     text-align: center;
 
 }
